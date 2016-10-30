@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  Components > Header
+\*------------------------------------*/
+
+.c-header {
+  margin-bottom: double($base-spacing-unit);
+  padding: $base-spacing-unit 0;
+
+  background-color: $bg-color-gray;
+
+  .is-home &,
+  .is-theme & {
+    margin-bottom: 0;
+
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__logo {
+    transition: $global-transition;
+
+    @include attention() {
+      text-decoration: none;
+
+      color: $color-brand;
+    }
+  }
+}

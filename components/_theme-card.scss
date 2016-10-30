@@ -1,0 +1,60 @@
+/*------------------------------------*\
+  Components > Theme Card
+\*------------------------------------*/
+
+.c-theme-card {
+  position: relative;
+
+  height: calc(100% - #{double($base-spacing-unit)});
+  margin-bottom: double($base-spacing-unit);
+  padding: double($base-spacing-unit);
+
+  border: 1px solid $color-border;
+  background-color: $bg-color-gray;
+
+  &__image {
+    margin-bottom: $base-spacing-unit;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include mq($from: tablet) {
+      transition: opacity $global-transition ease-in-out;
+
+      opacity: 0;
+
+      &.is-inview { opacity: 1; }
+
+      @media screen and ( -webkit-min-device-pixel-ratio: 0 ) { opacity: 1; }
+    }
+
+    &:after {
+      display: block;
+
+      width: 100%;
+      padding-bottom: 56.25%;
+
+      content: '';
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+  }
+
+  &__price {
+    position: absolute;
+    right: double($base-spacing-unit);
+    bottom: double($base-spacing-unit);
+
+    letter-spacing: .05em;
+
+    color: $color-brand;
+
+    sub { bottom: auto; }
+  }
+}

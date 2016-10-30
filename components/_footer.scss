@@ -1,0 +1,52 @@
+/*------------------------------------*\
+  Components > Footer
+\*------------------------------------*/
+
+.c-footer {
+  padding: double($base-spacing-unit) 0;
+
+  background-color: $bg-color-gray;
+
+  @include mq($from: desktop) {
+    padding: quadruple($base-spacing-unit) 0;
+  }
+
+  &__heading {
+    margin-bottom: half($base-spacing-unit);
+
+    text-transform: uppercase;
+
+    font-size: $font-size-medium;
+    font-weight: $font-weight-light;
+  }
+
+  &__copy {
+    display: block;
+
+    padding-top: $base-spacing-unit;
+
+    border-top: 1px solid $color-border;
+  }
+}
+
+.c-footer-list {
+  margin-bottom: $base-spacing-unit;
+
+  &__link {
+    margin-bottom: half($base-spacing-unit);
+  }
+
+  &__link {
+    display: block;
+
+    transition: $global-transition;
+
+    font-size: $font-size-small;
+
+    @include attention() {
+      text-decoration: none;
+
+      color: $color-brand;
+    }
+  }
+}

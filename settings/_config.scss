@@ -1,0 +1,23 @@
+// *----------------------------------*\
+//  Settings > Config
+// *----------------------------------*/
+
+// Global config settings
+// Inspired by: https://github.com/inuitcss/inuitcss/blob/develop/settings/_example.settings.config.scss
+
+$config: (
+  debug: false,
+  mq-show-breakpoints: false
+);
+
+// You can access data in this map using the following function
+//
+// config(<key>)
+//
+// Example:
+//
+// @if (config(debug) == true) { ... }
+
+@function config($key) {
+  @return map-get($config, $key);
+}

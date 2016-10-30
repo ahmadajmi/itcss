@@ -1,0 +1,12 @@
+/*------------------------------------*\
+  Elements > Links
+\*------------------------------------*/
+
+a {
+  text-decoration: none;
+  color: $color-link;
+
+  @include attention() {
+    text-decoration: underline;
+  }
+}

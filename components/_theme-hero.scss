@@ -1,0 +1,66 @@
+/*------------------------------------*\
+  Components > Theme Hero
+\*------------------------------------*/
+
+.c-theme-hero {
+  position: relative;
+  border-bottom: 1px solid $color-border;
+  padding: $base-spacing-unit 0;
+  margin-bottom: double($base-spacing-unit);
+
+  background-color: $bg-color-gray;
+
+  @include mq($from: tablet) {
+    padding: double(quadruple($base-spacing-unit)) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include mq($from: desktop) {
+    height: calc(100vh - 65px);
+  }
+
+  &__title {
+    margin-bottom: $base-spacing-unit;
+    font-size: double($font-size-tiny);
+    font-family: $font-serif;
+    font-weight: $font-weight-light;
+
+    @include mq($from: tablet) {
+      font-size: double($font-size-small);
+    }
+
+    @include mq($from: desktop) {
+      font-size: double($font-size-base);
+    }
+  }
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 56.25%;
+    }
+
+    @include mq($from: tablet) {
+      opacity: 0;
+      transition: opacity $global-transition ease-in-out;
+
+      &.is-inview { opacity: 1; }
+
+      @media screen and ( -webkit-min-device-pixel-ratio: 0 ) { opacity: 1; }
+    }
+  }
+}

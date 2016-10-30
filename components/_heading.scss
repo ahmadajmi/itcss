@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  Components > Heading
+\*------------------------------------*/
+
+// Heading with centered title and a border in the middle
+//
+// Example case:
+//
+// <h5 class="c-heading">
+//  <span class="c-heading__title">Comments</span>
+// </h5>
+
+.c-heading {
+  position: relative;
+
+  margin: double($base-spacing-unit) 0;
+
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  font-size: $font-size-small;
+  font-weight: $font-weight-light;
+  line-height: 0;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+
+    content: '';
+
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    padding: 0 half($base-spacing-unit);
+
+    background-color: $color-white;
+  }
+}

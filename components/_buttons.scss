@@ -1,0 +1,50 @@
+/*------------------------------------*\
+  Components > Buttons
+\*------------------------------------*/
+
+$btn-primary-bg: $color-brand;
+$btn-primary-bg-hover: #238cf6;
+
+$btn-secondary-bg: $color-white;
+$btn-secondary-bg-hover: $bg-color-gray;
+
+.c-btn {
+  display: inline-block;
+
+  padding: half($base-spacing-unit) double($base-spacing-unit);
+
+  cursor: pointer;
+  transition: $global-transition;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  border: 0;
+  border-radius: 0;
+
+  font-size: $font-size-medium;
+
+  @include attention() {
+    text-decoration: none;
+  }
+
+  &--primary {
+    color: $color-white;
+    background-color: $btn-primary-bg;
+
+    @include attention() {
+      background-color: $btn-primary-bg-hover;
+    }
+  }
+
+  &--secondary {
+    border: 1px solid $color-border;
+    background-color: $btn-secondary-bg;
+
+    @include attention() {
+      background-color: $btn-secondary-bg-hover;
+    }
+  }
+
+  &--full { width: 100%; }
+}

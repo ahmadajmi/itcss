@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  Elements > Fonts
+\*------------------------------------*/
+
+@font-face {
+  font-family: 'Moderat-Regular';
+  src: url('/fonts/Moderat/Moderat-Regular.eot');
+  src: url('/fonts/Moderat/Moderat-Regular.woff2') format('woff2'),
+       url('/fonts/Moderat/Moderat-Regular.woff') format('woff'),
+       url('/fonts/Moderat/Moderat-Regular.ttf') format('truetype'),
+       url('/fonts/Moderat/Moderat-Regular.svg#Moderat-Regular') format('svg'),
+       url('/fonts/Moderat/Moderat-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Born';
+  src: url('/fonts/Born/Born.eot');
+  src: url('/fonts/Born/Born.woff2') format('woff2'),
+       url('/fonts/Born/Born.woff') format('woff'),
+       url('/fonts/Born/Born.ttf') format('truetype'),
+       url('/fonts/Born/Born.svg#Born') format('svg'),
+       url('/fonts/Born/Born.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  Components > Home Hero
+\*------------------------------------*/
+
+.c-home-hero {
+  padding: quadruple($base-spacing-unit) 0;
+
+  text-align: center;
+  background-color: $bg-color-gray;
+
+  @include mq($from: tablet) {
+    padding: double(quadruple($base-spacing-unit)) 0;
+  }
+
+  @include mq($from: desktop) {
+    padding: 180px 0;
+  }
+
+  &__tagline {
+    margin-bottom: 0;
+
+    font-family: $font-serif;
+    font-size: $font-size-large;
+    font-weight: $font-weight-light;
+
+    @include mq($from: tablet) {
+      font-size: double($font-size-tiny);
+    }
+  }
+}

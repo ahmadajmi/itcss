@@ -1,0 +1,39 @@
+/*------------------------------------*\
+  Components > Testimonial
+\*------------------------------------*/
+
+.c-testimonial {
+  position: relative;
+  height: -webkit-calc(100% - #{double($base-spacing-unit)});
+  height:         calc(100% - #{double($base-spacing-unit)});
+  padding: double($base-spacing-unit);
+  margin-bottom: double($base-spacing-unit);
+
+  border: 1px solid $color-border;
+  background-color: $bg-color-gray;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: - $base-spacing-unit;
+    content: '';
+    border: solid transparent;
+  }
+
+  &:before {
+    left: -1px;
+    border-top-color: $color-border;
+    border-width: $base-spacing-unit $base-spacing-unit 0 0;
+  }
+
+  &:after {
+    border-top-color: $bg-color-gray;
+    border-width: $base-spacing-unit 14px 0 0;
+  }
+
+  &__author {
+    margin-bottom: 0;
+    font-style: italic;
+  }
+}

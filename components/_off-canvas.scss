@@ -1,0 +1,62 @@
+/*------------------------------------*\
+  Components > Off Canvas
+\*------------------------------------*/
+
+$off-canvas-width: 200px;
+
+.c-off-canvas-toggle {
+  display: none;
+
+  @include mq($until: desktop) {
+    position: absolute;
+    top: $base-spacing-unit;
+    right: double($base-spacing-unit);
+
+    display: block;
+
+    cursor: pointer;
+
+    &__icon {
+      right: - quarter($base-spacing-unit);
+
+      vertical-align: middle;
+    }
+  }
+}
+
+@include mq($until: desktop) {
+
+  // prevent horizontal scroll during off-canvas
+
+  html,
+  body { overflow-x: hidden; }
+
+  .c-off-canvas-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: $off-canvas-width;
+    height: 100%;
+
+    -webkit-transition: all $global-transition cubic-bezier(0.16, 0.63, 0.45, 0.98) 0s;
+            transition: all $global-transition cubic-bezier(0.16, 0.63, 0.45, 0.98) 0s;
+    -webkit-transform: translate3d(0px, 0px, 0px) translateX($off-canvas-width);
+            transform: translate3d(0px, 0px, 0px) translateX($off-canvas-width);
+
+    border-left: 1px solid $color-border;
+    background-color: $color-white;
+  }
+
+  .c-off-canvas-container {
+    -webkit-transition: all $global-transition cubic-bezier(0.16, 0.63, 0.45, 0.98) 0s;
+            transition: all $global-transition cubic-bezier(0.16, 0.63, 0.45, 0.98) 0s;
+    -webkit-transform: translate3d(0, 0, 0) translateX(0);
+            transform: translate3d(0, 0, 0) translateX(0);
+
+    &.is-active {
+      -webkit-transform: translate3d(0px, 0px, 0px) translateX(- $off-canvas-width);
+              transform: translate3d(0px, 0px, 0px) translateX(- $off-canvas-width);
+    }
+  }
+}

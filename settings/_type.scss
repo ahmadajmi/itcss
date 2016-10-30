@@ -1,0 +1,22 @@
+// *----------------------------------*\
+//  Settings > Type
+// *----------------------------------*/
+
+$font-serif:      'Born', serif;
+$font-sans-serif: 'Moderat-Regular', sans-serif;
+$font-monospace:  'Courier', monospace;
+
+$font-size-large:   19px;
+$font-size-base:    16px;
+$font-size-medium:  14px;
+$font-size-small:   12px;
+$font-size-tiny:    12px;
+
+$font-weight-light:   300;
+$font-weight-regular: 400;
+$font-weight-bold:    700;
+
+$line-height-base:    round($font-size-base    * 1.7);
+$line-height-medium:  round($font-size-medium  * 1.55);
+$line-height-small:   round($font-size-small   * 1.55);
+$line-height-tiny:    round($font-size-tiny    * 1.55);

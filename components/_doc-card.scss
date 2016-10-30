@@ -1,0 +1,31 @@
+/*------------------------------------*\
+  Components > Doc Card
+\*------------------------------------*/
+
+.c-doc-card {
+  display: block;
+
+  margin-bottom: double($base-spacing-unit);
+  padding: double($base-spacing-unit)
+           double($base-spacing-unit)
+           double($base-spacing-unit)
+           (quadruple($base-spacing-unit) + $base-spacing-unit);
+
+  transition: $global-transition;
+
+  border: 1px solid $color-border;
+  background-repeat: no-repeat;
+  background-position: double($base-spacing-unit) center;
+  background-size: double($base-spacing-unit);
+
+  @include attention() {
+    text-decoration: none;
+
+    color: $color-brand;
+    background-color: $bg-color-gray;
+  }
+
+  &--ghost      { background-image:     url('/images/assets/ghost-logo.png'); }
+  &--jekyll     { background-image:    url('/images/assets/jekyll-logo.png'); }
+  &--wordpress  { background-image: url('/images/assets/wordpress-logo.png'); }
+}

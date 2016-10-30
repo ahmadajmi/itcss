@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  Components > Social Navigation
+\*------------------------------------*/
+
+.c-social-nav {
+  position: absolute;
+  top: $base-spacing-unit;
+  right: quadruple($base-spacing-unit);
+
+  text-align: right;
+
+  @include mq($from: desktop) {
+    position: static;
+  }
+
+  &__item {
+    display: inline-block;
+
+    @include mq($from: desktop) {
+      vertical-align: top;
+
+      line-height: 0;
+    }
+  }
+
+  &__icon {
+    transition: $global-transition;
+    vertical-align: middle;
+
+    fill: $color-text;
+
+    @include attention() {
+      fill: $color-brand;
+    }
+  }
+}

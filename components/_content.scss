@@ -1,0 +1,21 @@
+/*------------------------------------*\
+  Components > Content
+\*------------------------------------*/
+
+.c-content {
+  a:not(.c-btn) {
+    transition: $global-transition;
+    text-decoration: underline;
+
+    @include attention() {
+      color: $color-brand;
+    }
+  }
+
+  img {
+    padding: $base-spacing-unit;
+    border: 1px solid $color-border;
+    text-align: center;
+    background-color: $bg-color-gray;
+  }
+}

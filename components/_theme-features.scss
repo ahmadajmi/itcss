@@ -1,0 +1,35 @@
+/*------------------------------------*\
+  Components > Theme Features
+\*------------------------------------*/
+
+.c-theme-features {
+  padding: 0 $base-spacing-unit;
+  background-color: $bg-color-gray;
+
+  &__item {
+    position: relative;
+    padding: $base-spacing-unit ($base-spacing-unit + half($base-spacing-unit));
+    border-bottom: 1px solid $color-border;
+    font-size: $font-size-medium;
+
+    &:last-child { border-bottom: 0; }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      content: '';
+      width: 6px;
+      height: 12px;
+      border: solid $color-brand;
+      border-width: 0 1px 1px 0;
+      -webkit-transform: rotate(45deg) translate(0, -50%);
+              transform: rotate(45deg) translate(0, -50%);
+    }
+  }
+
+  &__icon {
+    vertical-align: top;
+  }
+}
